@@ -1,0 +1,49 @@
+#
+Name: Neekriti Pradhananga
+Student ID: 2541149
+Course/Module: FSE
+Level: L4 sem 1
+Assignment title: Html and Css project
+
+## Code Explanation
+
+### HTML Explanation
+
+I started the page with `<!DOCTYPE html>` because it tells the browser that this is an HTML5 document, so the page is displayed correctly. I used `<html lang="en">` as the root element and set the language to English, because it helps screen readers and search engines understand the page. Inside `<head>` I used `<meta charset="UTF-8">` because it makes special symbols like the copyright sign show correctly. I used `<meta name="viewport">` because it makes the page fit the width of a phone screen, which is needed for responsive design. I used `<title>` to set the name that appears in the browser tab, and `<link rel="stylesheet">` to connect my CSS file, so the design stays separate from the content.
+
+In the body I used `<header>` for the top section and `<nav>` for the menu, because these semantic elements tell the browser and screen readers what each part is for. A plain `<div>` would not give that meaning. Inside the nav I used `<ul>` and `<li>` because a menu is a list of links, and I used `<a href>` to make each item clickable. I used `<main>` for the main content and `<section>` to group related content such as the intro and the menu. I used `<div>` for the card container and for each card, because no semantic tag fits there. I used `<h1>`, `<h2>` and `<h3>` for headings in order of importance, `<p>` for descriptions and prices, and `<img>` for the food photos, with the `alt` attribute to describe the image if it does not load. Finally I used `<footer>` for the bottom section with contact information.
+
+### CSS Explanation
+
+**Reset.** I used the `*` selector to apply rules to every element on the page. I set `margin: 0` and `padding: 0` because browsers add their own default spacing, and I wanted to start from zero and control the spacing myself. I used `box-sizing: border-box` because it includes padding and border inside the element's width, so adding padding does not make the boxes bigger than I intended.
+
+**Body.** I used `font-family: Arial, sans-serif` to give the whole page one clean and readable font, and `sans-serif` is the backup if Arial is not available. I used `background: #fff8f0` to give the page a light warm colour that suits a food website.
+
+**Navigation bar.** I used `display: flex` on the `nav` because Flexbox puts items in a row, which places the restaurant name and the links side by side. I used `justify-content: space-between` to push the name to the left and the links to the right, and `align-items: center` to keep them vertically in the middle. I used a red `background` with `color: white` so the text is easy to read, and `padding: 15px 30px` to give the bar height and keep the text away from the edges. On the `ul` I used `display: flex` to make the links sit in a row and `list-style: none` to remove the bullet points, because a menu should not show bullets. On the links I used `text-decoration: none` to remove the underline and `padding: 8px 12px` to add space around each link and make the clickable area bigger. I used `nav a:hover` to change the background colour when the mouse is over a link, so the user can see which link they are pointing at.
+
+**Intro section.** I used `text-align: center` to put the heading and text in the middle so they become the focus of the page, and `padding: 50px 20px` to give the section space above and below.
+
+**Cards.** I used `display: grid` on the container because the cards sit in rows and columns, and Grid is designed for that. I used `grid-template-columns: repeat(3, 1fr)` to create 3 columns of equal width, where `1fr` means one equal share of the available space. I used `gap: 20px` to put equal space between the cards without adding margins to each one. For each card I used `background: white` so the card stands out from the cream page, `border-radius: 10px` to round the corners, `padding: 15px` to keep the content away from the card's edge, and `box-shadow` to make the card look slightly raised. I used `.card:hover` with a stronger shadow so the card reacts when the mouse is over it, which shows the user it is interactive.
+
+For the images I used `width: 100%` so the image always fills the width of the card, and `height: 170px` so every image has the same height and all cards look consistent. I used `object-fit: cover` because it crops the image to fill the space without stretching it, so photos with different sizes do not look squashed. I used `margin-top: 10px` on the titles and paragraphs to separate the lines inside the card, and I made the price bold and red with `font-weight: bold` and a `color` so it stands out.
+
+**Button.** I styled the Order link with `display: inline-block` because a normal link ignores top margin, and this makes it behave like a button while staying in line. I used a red `background` with white `color`, `padding: 8px 16px` to make it big enough to click, and `border-radius: 5px` to give it rounded corners. I used `.card a:hover` to change it to a darker red when the mouse is over it, so the user knows it can be clicked.
+
+**Footer.** I used the same red `background` and white `color` as the navigation bar so the page looks consistent from top to bottom. I used `text-align: center` for the standard footer look and `padding: 20px` to give the text some room.
+
+**Responsive design.** I used `@media (max-width: 900px)` because it applies the rules inside it only when the screen is 900px wide or smaller, which targets tablets. Inside it I changed `grid-template-columns` to `repeat(2, 1fr)` because three cards are too narrow on a tablet. I used `@media (max-width: 600px)` for phones and changed the grid to `1fr`, so there is one card per row. In the same media query I used `flex-direction: column` on the navigation, because the links do not fit side by side on a small screen, so they stack vertically.
+
+### Why I Used Grid for Cards and Flexbox for the Navigation Bar
+
+I used Flexbox for the navigation bar because Flexbox works in one direction, and the navigation bar is a single row of items. I used Grid for the cards because Grid works in two directions, rows and columns together. The cards form a layout with equal columns, and with Grid I can easily change the number of columns in each media query.
+
+## Learning Resources
+
+| No. | Resource | Topic Learned | What I Learned | How I Applied It |
+|-----|----------|---------------|----------------|------------------|
+| 1 | Notes provided by Ram sir | HTML structure, CSS basics, box model | I learned the basic structure of an HTML page, how semantic tags like `<header>`, `<nav>` and `<footer>` are used, and how CSS selectors, colours, margin, padding and the box model work. | I used these tags to build the page structure and used class selectors, padding and margin to style the navigation bar, cards and footer. |
+| 2 | Google search (similar navigation bar and card layout websites) | Navigation bar, card design, responsive layout | I looked at examples of similar projects to see how a navigation bar and a card layout are usually designed. I learned that Flexbox is used for a horizontal menu, that Grid is used to arrange cards in columns, and that media queries change the layout for different screen sizes. | I used Flexbox for my navigation bar, CSS Grid with 3, 2 and 1 columns for the cards, and media queries to make the page responsive. I wrote my own version with my own theme (Tasty Corner). |
+| 3 | AI assistant (Claude) | Code structure and explanation | I used it to get a starter version of the code and to understand what each HTML tag and CSS property does. | I read the code, tested it in the browser, and changed it to match my project.  |
+
+### How I Used These Resources
+First I studied the notes provided by Ram sir to understand the basic concepts of HTML and CSS. After that I searched on Google for projects similar to mine to see how a navigation bar, a card and a responsive layout are normally built. I did not copy any complete website. I used the examples only to understand the ideas, and then I wrote my own code for the Tasty Corner page. I tested it in the browser by resizing the window to check that the layout changes on tablet and mobile screens.
